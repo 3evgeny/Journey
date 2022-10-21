@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/country"
+        android:title="Страны"
+        android:icon="@drawable/ic_country"/>
+
+    <item
+        android:id="@+id/hotel"
+        android:title="Отели"
+        android:icon="@drawable/ic_hotel"/>
+
+    <item
+        android:id="@+id/ticket"
+        android:title="Поездки"
+        android:icon="@drawable/ic_ticket"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Профиль"
+        android:icon="@drawable/ic_profile"/>
+</menu>

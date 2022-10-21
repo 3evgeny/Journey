@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.views.CountryFragment">
+
+
+    <EditText
+        android:id="@+id/searchHotel"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:drawableStart="@drawable/ic_search"
+        android:background="@drawable/bg_edit_text_search"
+        android:hint="Найти"
+        android:textColorHint="@color/lime"
+        android:textColor="@color/green"
+        android:paddingStart="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerHotel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchHotel"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

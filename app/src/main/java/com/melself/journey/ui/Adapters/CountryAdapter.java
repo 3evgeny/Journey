@@ -11,7 +11,7 @@ import com.melself.journey.databinding.ListCountryBinding;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryViewHolder> {
 
-    public class CountryViewHolder extends RecyclerView.ViewHolder {
+    public static class CountryViewHolder extends RecyclerView.ViewHolder {
         ListCountryBinding binding;
 
         public CountryViewHolder(ListCountryBinding item) {
@@ -23,7 +23,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
     @NonNull
     @Override
     public CountryAdapter.CountryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new CountryViewHolder(ListCountryBinding.inflate(LayoutInflater.from(parent.getContext()),parent, false));
+        return new CountryViewHolder(ListCountryBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override

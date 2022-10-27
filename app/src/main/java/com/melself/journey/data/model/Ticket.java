@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey;
 
 public class Ticket {
     private long id;
-    private String name;
+    private String number;
     private String country;
     private String hotel;
     private String date;
@@ -14,9 +14,9 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(long id, String name, String country, String hotel, String date, String price) {
+    public Ticket(long id, String number, String country, String hotel, String date, String price) {
         this.id = id;
-        this.name = name;
+        this.number = number;
         this.country = country;
         this.hotel = hotel;
         this.date = date;
@@ -31,12 +31,12 @@ public class Ticket {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNumber() {
+        return number;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.number = number;
     }
 
     public String getCountry() {

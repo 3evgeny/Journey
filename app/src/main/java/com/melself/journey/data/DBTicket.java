@@ -5,6 +5,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import com.melself.journey.data.model.Ticket;
+
 @Entity(tableName = "tickets")
 public class DBTicket {
 
@@ -13,7 +15,7 @@ public class DBTicket {
     private long id;
 
     @ColumnInfo(name = "_number")
-    private String name;
+    private String number;
 
     @ColumnInfo(name = "_country")
     private String country;
@@ -31,9 +33,9 @@ public class DBTicket {
     public DBTicket() {
     }
 
-    public DBTicket(long id, String name, String country, String hotel, String date, String price) {
+    public DBTicket(long id, String number, String country, String hotel, String date, String price) {
         this.id = id;
-        this.name = name;
+        this.number = number;
         this.country = country;
         this.hotel = hotel;
         this.date = date;
@@ -48,12 +50,12 @@ public class DBTicket {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNumber() {
+        return number;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public String getCountry() {
@@ -86,5 +88,16 @@ public class DBTicket {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public static DBTicket convertToTicket(Ticket ticket){
+        DBTicket dbTicket = new DBTicket();
+        dbTicket.setId(ticket.getId());
+        dbTicket.setNumber(ticket.getNumber());
+        dbTicket.setCountry(ticket.getCountry());
+        dbTicket.setHotel(ticket.getHotel());
+        dbTicket.setDate(ticket.getDate());
+        dbTicket.setPrice(ticket.getPrice());
+        return dbTicket;
     }
 }

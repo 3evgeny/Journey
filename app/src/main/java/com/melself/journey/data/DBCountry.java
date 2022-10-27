@@ -1,9 +1,12 @@
 package com.melself.journey.data;
 
+import androidx.lifecycle.Transformations;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+
+import com.melself.journey.data.model.Country;
 
 @Entity(tableName = "countries")
 public class DBCountry {
@@ -61,5 +64,23 @@ public class DBCountry {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public static DBCountry convertToDBCountry(Country country){
+        DBCountry dbCountry = new DBCountry();
+        dbCountry.setId(country.getId());
+        dbCountry.setName(country.getName());
+        dbCountry.setDescription(country.getDescription());
+        dbCountry.setPrice(country.getPrice());
+        return dbCountry;
+    }
+
+    public Country convertToCountry(){
+        Country country = new Country();
+        country.setId(this.getId());
+        country.setName(this.getName());
+        country.setDescription(this.getDescription());
+        country.setPrice(this.getPrice());
+        return country;
     }
 }

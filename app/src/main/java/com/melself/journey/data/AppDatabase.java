@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 @Database(entities = {DBCountry.class, DBTicket.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     private static final int NUMBER_THREADS = 4;
-    static final ExecutorService databaseWriteExecutor =
+    public static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_THREADS);
 
     public abstract CountryDAO getCountryDAO();

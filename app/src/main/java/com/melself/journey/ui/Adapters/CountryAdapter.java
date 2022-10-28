@@ -27,6 +27,8 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
         public void bindView(Country country){
             binding.nameCountryList.setText(country.getName());
+            binding.descriptionCountryList.setText(country.getDescription());
+            binding.priceCountryList.setText(country.getPrice() + " руб.");
         }
     }
 
@@ -60,4 +62,8 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
         notifyDataSetChanged();
     }
 
+    public void filterList(List<Country> filterList) {
+        data = filterList;
+        notifyDataSetChanged();
+    }
 }

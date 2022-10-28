@@ -58,12 +58,13 @@ public class CountryFragment extends Fragment {
         //mViewModel.insert(new Country(0,"Россия", "fhsjf", "10000" ));
 
 
-        mViewModel.getCountryFromView(1).observe(getViewLifecycleOwner(), new Observer<Country>() {
-            @Override
-            public void onChanged(Country country) {
-                System.out.println(country.getName());
-            }
-        });
+//        mViewModel.getCountryFromView().observe(getViewLifecycleOwner(), new Observer<Country>() {
+//            @Override
+//            public void onChanged(Country country) {
+//                System.out.println(country.getName());
+//                mViewModel.delete(country);
+//            }
+//        });
 
         mViewModel.getAllCountriesFromView().observe(getViewLifecycleOwner(), new Observer<List<Country>>() {
             @Override

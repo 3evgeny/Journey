@@ -1,14 +1,12 @@
 package com.melself.journey.ui.Adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.melself.journey.MainActivity;
-import com.melself.journey.data.DBCountry;
 import com.melself.journey.data.model.Country;
 import com.melself.journey.databinding.ListCountryBinding;
 
@@ -43,6 +41,13 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
     public void onBindViewHolder(@NonNull CountryAdapter.CountryViewHolder holder, int position) {
         Country country = data.get(position);
         holder.bindView(country);
+
+        holder.binding.applyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override

@@ -45,6 +45,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="35dp"
         android:layout_marginBottom="12dp"
+        android:layout_above="@id/applyBtn"
         tools:ignore="HardcodedText,SmallSp" />
 
     <TextView
@@ -59,4 +60,17 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         tools:ignore="HardcodedText,SmallSp" />
+
+    <Button
+        android:id="@+id/applyBtn"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:background="@drawable/bg_btn_list"
+        android:text="Оформить"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="30dp"/>
 </RelativeLayout>
